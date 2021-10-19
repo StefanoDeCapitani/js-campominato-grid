@@ -8,6 +8,35 @@
     <title>Campo Minato</title>
   </head>
   <body>
+    <header class="header">
+      <div class="header__left">
+        <img
+          src="img/Logo boolean.png"
+          class="header__logo"
+          alt="Boolean logo"
+        />
+        <h1 class="header__title">Campo Minato: la Griglia</h1>
+      </div>
+      <div class="header__right">
+        <label for="level-select">Difficoltà: </label>
+        <select id="level-select">
+          <option value="1">Easy</option>
+          <option value="2">Medium</option>
+          <option value="3">Hard</option>
+        </select>
+        <button class="btn--play">Play</button>
+      </div>
+    </header>
+    <main class="main">
+      <div class="minefield-container">
+        <div class="ratio">
+          <div class="minefield"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>Made with &hearts; by <a href="#">Boolean</a></p>
+    </footer>
     <script src="js/main.js"></script>
   </body>
 </html>

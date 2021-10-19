@@ -5,3 +5,98 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex: 0 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+}
+
+.header__left,
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__right {
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.header__logo {
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.header__title {
+  font-size: 1.5rem;
+}
+
+#level-select {
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+}
+
+.main {
+  flex-grow: 1;
+  background-color: aquamarine;
+  display: grid;
+  place-items: center;
+}
+
+.minefield-container {
+  min-width: 300px;
+  width: 50%;
+  max-width: 400px;
+}
+
+.ratio {
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.cell {
+  background-color: aquamarine;
+  position: relative;
+}
+
+.minefield,
+.cell-content {
+  position: absolute;
+}
+
+.cell-content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.active {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.minefield {
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(10, 10fr);
+  gap: 1px;
+  background-color: black;
+  border: 1px solid black;
+}
+
+.footer {
+  flex: 0 0 auto;
+  padding: 1rem 1.5rem;
+}
