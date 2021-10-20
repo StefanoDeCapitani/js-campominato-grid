@@ -48,6 +48,18 @@ body {
   background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
 }
 
+#level-select,
+.btn--play {
+  border: 1px solid black;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+}
+
+.btn--play {
+  background: linear-gradient(0.25turn, rgb(155, 183, 235), rgb(193, 217, 253));
+  padding: 0.3rem 1rem;
+}
+
 .main {
   flex-grow: 1;
   background-color: aquamarine;
@@ -58,7 +70,7 @@ body {
 .minefield-container {
   min-width: 300px;
   width: 50%;
-  max-width: 400px;
+  max-width: 450px;
 }
 
 .ratio {
@@ -67,8 +79,10 @@ body {
 }
 
 .cell {
-  background-color: aquamarine;
+  background-color: lightgray;
+  box-shadow: 5px 5px 0 white inset;
   position: relative;
+  cursor: pointer;
 }
 
 .minefield,
@@ -77,14 +91,21 @@ body {
 }
 
 .cell-content {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-color: rgb(233, 233, 233);
+  inset: 5px;
+  display: grid;
+  place-content: center;
+  font-size: clamp(0.5rem, 1.5vw, 1rem);
 }
 
 .active {
   background-color: cornflowerblue;
   color: white;
+  box-shadow: 5px 5px 0 rgb(193, 217, 253) inset;
+}
+
+.active .cell-content {
+  background-color: rgb(155, 183, 235);
 }
 
 .minefield {
